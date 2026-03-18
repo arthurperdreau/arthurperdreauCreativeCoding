@@ -7,8 +7,11 @@ import {Autoplay, Navigation} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
+import {SplitText} from "gsap/SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
+
 
 
 
@@ -153,6 +156,20 @@ gsap.to("hr", {
     yPercent: 100,
     duration: 5,
     stagger: 0.5,
+});
+
+SplitText.create("h2", {
+    type: "chars",
+    charsClass: "chars",
+    mask: "chars",
+});
+
+gsap.from(".chars", {
+    yPercent: -100,
+    stagger: {
+        amount: 0.5,
+        from: "center",
+    },
 });
 
 
