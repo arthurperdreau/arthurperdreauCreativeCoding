@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-gsap.utils.toArray("#bic-image, h2, p").forEach((el) => {
+gsap.utils.toArray<HTMLElement>("#bic-image, h2, p").forEach((el) => {
     gsap.to(el, {
         opacity: 1,
         y: 0,
@@ -26,7 +26,7 @@ gsap.utils.toArray("#bic-image, h2, p").forEach((el) => {
     });
 });
 
-gsap.utils.toArray("h2, p").forEach((el) => {
+gsap.utils.toArray<HTMLElement>("h2, p").forEach((el) => {
     gsap.fromTo(el,
         { x: -50, opacity: 0 },
         {
@@ -72,8 +72,8 @@ gsap.set(list, { opacity: 0 });
 
 const tl = gsap.timeline({
     paused: true,
-    onComplete: () => isOpen = true,
-    onReverseComplete: () => isOpen = false
+    onComplete: () => {isOpen = true},
+    onReverseComplete: () => {isOpen = false}
 });
 
 tl.to(menu, {
@@ -93,11 +93,10 @@ tl.to(menu, {
         duration: 0.4
     }, "-=0.2");
 
-if ("addEventListener" in button) {
-    button.addEventListener("click", () => {
+    button!.addEventListener("click", () => {
         isOpen ? tl.reverse() : tl.play();
     });
-}
+
 
 new Swiper(".slider", {
     slidesPerView: 4,
@@ -111,7 +110,7 @@ new Swiper(".slider", {
         disableOnInteraction: false,
     },
 });
-const penSlider = new Swiper(".pen-slider", {
+new Swiper(".pen-slider", {
     slidesPerView: 3,
     spaceBetween: 60,
     centeredSlides: true,
