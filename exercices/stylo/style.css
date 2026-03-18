@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500&display=swap');
+
+.swiper {
+  position: relative;
+  background-color: #feb914;
+  transition: background 0.5s;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.pen-slider-section {
+  padding: 60px 0;
+  background: #fff;
+  overflow: hidden; /* cache le débordement au niveau section */
+}
+
+.pen-slider {
+  width: 100%;
+  padding: 60px 0;
+  overflow: visible; /* permet aux slides adjacents d'être visibles */
+}
+
+.pen-slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 200px;
+}
+
+.pen-slider .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.pen-slider .swiper-slide img {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
+}
+
+.pen-slider .swiper-button-prev,
+.pen-slider .swiper-button-next {
+  color: #002E6D;
+}
+
+.pen-slider .swiper-button-prev:after,
+.pen-slider .swiper-button-next:after {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+

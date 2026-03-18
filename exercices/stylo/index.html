@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <script type="module" src="./main.ts" async></script>
+  </head>
+  <body>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white border-b-[3px] border-[#002E6D]">
+    <div class="flex justify-between items-center px-6 h-[60px]">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-[#FFD200] rounded-full flex items-center justify-center">
+          <span class="text-[#002E6D] font-black text-base">B</span>
+        </div>
+        <span class="font-black text-xl uppercase tracking-widest text-[#002E6D]">
+        B<span class="text-[#FFD200]">I</span>C
+      </span>
+      </div>
+
+      <!-- Bouton -->
+      <button id="menuBtn"
+              class="w-11 h-11 bg-[#002E6D] text-white text-lg flex items-center justify-center hover:bg-[#001f4d] transition-colors rounded">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- MENU FULLSCREEN -->
+  <div id="menu"
+       class="fixed top-0 right-0 bg-[#002E6D] text-white w-16 h-16 overflow-hidden z-40 flex items-center justify-center">
+
+    <ul class="text-center space-y-8 opacity-0">
+      <li class="font-black text-5xl uppercase tracking-widest hover:text-[#FFD200] transition cursor-pointer">Accueil</li>
+      <li class="font-black text-5xl uppercase tracking-widest hover:text-[#FFD200] transition cursor-pointer">Services</li>
+      <li class="font-black text-5xl uppercase tracking-widest hover:text-[#FFD200] transition cursor-pointer">Contact</li>
+    </ul>
+
+  </div>
+
+
+
+  <section class="h-[75vh] bg-white flex items-center justify-center relative overflow-hidden">
+
+    <!-- Stylo -->
+    <img
+            id="pen"
+            src="./images/bic.webp"
+            alt="Stylo BIC"
+            class="w-20 md:w-32 object-contain"
+    />
+
+    <!-- Texte décoratif -->
+    <h2 class="absolute text-6xl md:text-8xl font-bold text-blue-600 opacity-10">
+      WRITE
+    </h2>
+
+  </section>
+
+
+  <div class="swiper slider w-full mt-16">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide ">
+        <div class="flex items-center justify-center h-full">
+          <img src="./images/logobic.png" alt="BIC" class="h-16 w-auto object-contain" />
+        </div>
+      </div>
+      <div class="swiper-slide ">
+        <div class="flex items-center justify-center h-full">
+          <img src="./images/logobic.png" alt="BIC" class="h-16 w-auto object-contain" />
+        </div>
+      </div>
+      <div class="swiper-slide ">
+        <div class="flex items-center justify-center h-full">
+          <img src="./images/logobic.png" alt="BIC" class="h-16 w-auto object-contain" />
+        </div>
+      </div>
+      <div class="swiper-slide ">
+        <div class="flex items-center justify-center h-full">
+          <img src="./images/logobic.png" alt="BIC" class="h-16 w-auto object-contain" />
+        </div>
+      </div>
+      <div class="swiper-slide ">
+        <div class="flex items-center justify-center h-full">
+          <img src="./images/logobic.png" alt="BIC" class="h-16 w-auto object-contain" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <section class="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-6 md:px-16 bg-white">
+
+    <div class="md:w-1/2 flex justify-center">
+      <img
+              id="bic-image"
+              src="./images/bic.webp"
+              alt="Stylo BIC"
+              class="w-32 md:w-48 object-contain opacity-0 translate-y-10 transition-all duration-1000"
+      />
+    </div>
+
+    <div class="md:w-1/2 flex flex-col gap-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#002E6D] opacity-0 translate-y-10 transition-all duration-1000">
+        Écris ton histoire
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 opacity-0 translate-y-10 transition-all duration-1000">
+        Avec le stylo BIC, chaque mot compte. Laissez votre créativité s’exprimer librement,
+        que ce soit pour écrire, dessiner ou annoter vos idées.
+      </p>
+      <p class="text-lg md:text-xl text-gray-700 opacity-0 translate-y-10 transition-all duration-1000">
+        Notre technologie garantit un flux d’encre fluide, pour que chaque trait soit parfait,
+        du premier au dernier mot.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="pen-slider-section">
+    <div class="swiper pen-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/bic.webp" alt="Stylo BIC" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/bic.webp" alt="Stylo BIC" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/bic.webp" alt="Stylo BIC" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/bic.webp" alt="Stylo BIC" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/bic.webp" alt="Stylo BIC" />
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+
+  </body>
+</html>
