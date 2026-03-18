@@ -43,19 +43,19 @@ gsap.utils.toArray("h2, p").forEach((el) => {
 });
 gsap.fromTo("#pen",
     {
-        scale: 0.2,   // petit au début
+        scale: 0.2,
         rotate: 0
     },
     {
-        scale: 2.5,   // grossit
-        rotate: 720,  // tourne
+        scale: 2.5,
+        rotate: 720,
         ease: "none",
         scrollTrigger: {
             trigger: "#pen",
             start: "top center",
             end: "bottom top",
             scrub: true,
-            // markers: true // active pour debug
+
         }
     }
 );
@@ -67,8 +67,7 @@ const menu = document.getElementById("menu");
 const items = document.querySelectorAll("#menu li");
 const list = document.querySelector("#menu ul");
 
-// état initial
-gsap.set(menu, { width: 64, height: 64 });
+gsap.set(menu, { width: 64, height: 64, zIndex: 49 });
 gsap.set(list, { opacity: 0 });
 
 const tl = gsap.timeline({
@@ -150,4 +149,11 @@ function updateZoom(swiper: any) {
         active.style.opacity = "1";
     }
 }
+
+gsap.to("hr", {
+    yPercent: 100,
+    duration: 5,
+    stagger: 0.5,
+});
+
 
